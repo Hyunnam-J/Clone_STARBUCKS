@@ -1,0 +1,447 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	border-top: 2px solid black;
+	background: ivory;
+	overflow: hidden;
+}
+html {
+	font-size: 20px; /* 생략하면 항상 16px 20으로 하면 계산이 편하지*/
+}
+body {
+	color: #333;
+}
+
+
+ul {
+	list-style: none;
+}
+
+a, a:link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.wrap {
+	max-width: 1050px;
+	margin: 0 auto;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* 검색창 */
+[type=search]{
+	width: 30px;
+	height: 30px;
+}
+
+[type=image]{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.nav-top {
+	display: flex;
+}
+
+.nav-bottom {
+	display: flex;
+}
+
+.nav-top a {
+	text-transform: capitalize;
+}
+
+.nav-top a:hover {
+	text-decoration: underline;
+}
+
+.nav-top li::after{
+	content:'';
+	display: inline-block;
+	width: 1px;
+	height: 50%;
+	background: #ccc;
+	margin: 0 .925rem;
+}
+
+.nav-top li:nth-child(4)::after {
+	width: 0;
+}
+
+.nav-top li:nth-child(5)::after {
+	width: 0;
+}
+.nav-top li:nth-last-child(1) {
+	position: relative;
+}
+
+.nav-bottom a {
+	text-transform: uppercase;
+	padding: .5rem 1rem;
+	margin: .2rem 0 0 0;
+	display: block;
+}
+
+.nav-bottom li:hover {
+	background: #3a3a3a;
+	color: yellowgreen;
+	text-decoration: underline;
+	height: 80px;
+}
+
+
+.post-it {
+	position: fixed;
+	width: 140px;
+	height: 214px;
+	top: 200px;
+	right: 5%;
+}
+
+.beverage{
+	display: flex;
+	height: 650px;
+	justify-content: center;
+	column-gap: 1rem;
+}
+
+.b1 {
+	align-self: center;
+}
+
+.b2 {
+	margin-top: 3rem;
+}
+
+.b3 {
+	align-self: center;
+}
+
+.b4{
+	padding-top: 3rem;
+}
+
+.promotion {
+	position: relative;
+}
+
+.promo-bg{
+	display: flex;
+	height: 700px;
+	position: absolute;
+	z-index: -1;
+	width: 100%;;
+	top: 0;
+}
+
+.left-bg{
+	background: yellowgreen;
+	flex: 5.5
+}
+.right-bg{
+	background: skyblue;
+	flex: 4.5
+}
+
+.more {
+	border: 1px solid white;
+	border-radius: 3px;
+	color: white;
+	width: 60%;
+	margin: 2rem auto;
+	text-align: center;
+	padding: .5rem;
+	transition: all .3s ease-in-out;
+	font-size: .825rem;
+}
+
+.more:hover {
+	background: white;
+	color: yellowgreen;
+	text-decoration: underline;
+}
+
+.notice {
+	display: flex;
+	height: 50px;
+	overflow: hidden; /* 후에 삭제 */
+}
+
+.news-area{
+	flex: 5.5;
+	background: #000;
+	color: white;
+}
+
+.area-items {
+	display: flex;
+	float: right;
+	align-items: center;
+	column-gap: 1rem;
+}
+
+.area-items ul {
+	height: 50px;
+	overflow: hidden;
+	margin-right: 4rem;
+}
+.area-items h2 {
+	font-size: 1rem;
+}
+.area-items ul li {
+	margin: 15px 0;
+}
+.area-items button{
+	margin: 0 1rem 0 ;
+	font-size: 1.250rem;
+	width: 36px;
+	height: 36px;
+	background: none;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	color: #ccc;
+}
+
+.promo-area{
+	flex: 4.5;
+	background: #f1f1f1;
+}
+
+.promo-items{
+	display: flex;
+	float: left;
+	align-items: center;
+	height: 50px;
+	margin: 0 0 0 5rem;
+}
+.promo-items h2{
+	font-size: 1rem;
+}
+.promo-items button {
+	border: 0;
+	background: none;
+	margin: 0 0 0 4rem;
+}
+
+.benefit {
+	background: #17634c;
+	color: white;
+	font-size: .875rem;
+}
+
+.benefit .wrap{
+	column-gap: 1.8rem;
+}
+.reward-logo{
+	flex: 1;
+}
+.reward-details{
+	flex: 4;
+}
+.membership {
+	position: relative;
+	border-bottom: 1px solid #f2f2f2;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+.membership p:nth-child(1){
+	margin-bottom: .625rem;
+}
+.membership p:nth-child(2){
+	font-size: .875rem;
+}
+.membership p:nth-child(2){
+	font-size: .875rem;
+}
+.membership p {
+	letter-spacing: -1px;
+}
+.btns{
+	display: flex;
+	position: absolute;
+	right: 0;
+	bottom: 1rem;
+	column-gap: 1rem;
+}
+.btns li:nth-child(1) a{
+	color: white;
+	border: 2px solid cadetblue;
+	background: cadetblue;
+	font-size: .725rem;
+	padding: .6rem 1rem;
+	border-radius: .15rem;
+}
+.btns li:nth-child(2) a{
+	color: white;
+	border: 2px solid white;
+	font-size: .725rem;
+	padding: .6rem 1rem;
+	border-radius: .15rem;
+}
+.giftcard {
+	position: relative;
+}
+
+.giftcard p{
+	font-size: .7rem;
+	letter-spacing: -1px;
+}
+.gift-button{
+	position: absolute;
+	right: 0;
+}
+
+.gift-button a{
+	color: white;
+	border: 2px solid white;
+	font-size: .725rem;
+	padding: .6rem 1.7rem;
+	border-radius: .15rem;
+}
+
+.new-beans{
+	padding: 3rem 0;
+	background: url("../images/2022_Summer2_bean_bg.jpg") no-repeat center / cover;
+}
+
+.new-beans .wrap{
+	justify-content: space-between;
+}
+
+.beans-text {
+	color: white;
+	margin: 0 2rem 0 0;
+	line-height: 1.5;
+}
+
+.beans-text p:nth-child(1){
+	font-size: .625rem;
+	color: #f3f3f3;
+}
+.beans-text p:nth-child(2){
+	font-size: 1.5rem;
+	color: #fff;
+}
+.beans-text p:nth-child(3){
+	font-size: .625rem;
+	color: #f3f3f3;
+}
+.beans-text .more{
+	margin: 1rem 0;
+}
+.beans-text .more:hover {
+	color: cadetblue;
+}
+
+.reserve-bg{
+	height: 400px;
+	background:	url("../images/reserve_2022_indonesia_leaf1.png")no-repeat left bottom,
+				url("../images/reserve_2022_indonesia_leaf2.png")no-repeat right bottom,
+	 			url("../images/reserve_2022_indonesia_visual3.png")no-repeat 110% bottom,
+	 			url("../images/reserve_2022_indonesia_visual_bg.jpg")no-repeat center/cover;
+}
+.reserve-text{
+	margin: 4rem 0 0 0;
+}
+.reserve-text .more{
+	border: 1px solid #c46008;
+	color: #c46008;
+	width: 25%;
+}
+
+.reserve-text .more:hover {
+	color: white;
+	background: #c46008; 
+}
+.favorite-bg{
+	height: 700px;
+	background: url("../images/fav_prod_bg_new.jpg") no-repeat fixed center / cover;
+}
+
+.favorite .wrap{
+	height: 700px;
+	align-items: center;
+	column-gap: 2rem;
+}
+.favorite-text{
+	text-align: right;
+}
+.favorite-text .more{
+	margin: 2rem 0 2rem 33%;
+}
+.favorite-img{
+	width: 70%;
+}
+.favorite-img img{
+	width: 100%;
+	object-fit: cover;
+}
+.favorite-text .more:hover {
+	color: white;
+	background: #c46008; 
+}
+
+.magazine-bg{
+	height: 400px;
+	background: url("../images/reserve_bg_pc.png") no-repeat 0 0 / contain;
+}
+
+.magazine-text{
+	margin: 2rem 0 0 0;
+	height: 400px;
+}
+
+.magazine-text .more{
+	border: 2px solid black;
+	color: black;
+	width: 25%;
+	margin: 2rem 0 2rem 40%;
+}
+.magazine-text .more:hover{
+	background: black;
+	color: white;
+}
+.magazine-img{
+	width: 40%;
+}
+
+.magazine-img img{
+	width: 100%;
+	object-fit:cover;
+}
+.place{
+	height: 400px;
+	background: url("../images/store_exp_img03.png") no-repeat 50% top,
+	url("../images/store_exp_img04.png") no-repeat right bottom,
+	url("../images/store_bg.jpg") no-repeat 0 0 / cover;
+}
+.place-text{
+	order:1;
+	margin-top: 3rem;
+	text-align: left;
+}
+.place-text .more{
+	margin-left: 0;
+	border: 2px solid black;
+	color: black;
+	width: 130px;
+}
+
+.place-text > p:nth-child(2){
+	margin-top: 1.5rem;
+}
+.place-img{
+	order:0;
+	width: 450px;
+	height: 380px;
+	background: url("../images/store_exp_img01.png") no-repeat right bottom,
+	url("../images/store_exp_img02.png") no-repeat;
+}
